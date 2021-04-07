@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<!-- <bean id="add1" class="com.cg.spring.DI_demo.bean.Address">
+		<property name="hno" value="1-2-3" />
+		<property name="street" value="Doddaballapur" />
+		<property name="city" value="Bangalore Rural" />
+		<property name="state" value="Karnataka" />
+	</bean>-->
+	
+	<!-- 2 bean of address leads to ambiguity. This can be solved using annotations-->
+	<!-- <bean id="add2" class="com.cg.spring.DI_demo.bean.Address">
+		<property name="hno" value="4-5-6" />
+		<property name="street" value="MG Street" />
+		<property name="city" value="Hyderabad" />
+		<property name="state" value="Telangana" />
+	</bean>-->
+	
+	<bean id="address" class="com.cg.spring.DI_demo.bean.Address">
+		<property name="hno" value="1-2-3" />
+		<property name="street" value="Doddaballapur" />
+		<property name="city" value="Mysore" />
+		<property name="state" value="Karnataka" />
+		</bean>
+	
+	<!--<bean id="per1" class="com.cg.spring.DI_demo.bean.Person" autowire="byType">-->
+	<!--<bean id="per1" class="com.cg.spring.DI_demo.bean.Person" autowire="constructor">-->
+		<bean id="per1" class="com.cg.spring.DI_demo.bean.Person" autowire="byName">
+		<property name="ssn" value="7001" />
+		<property name="name" value="Ajay" />
+	</bean>
+
+
+
+</beans>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+
+	<bean id="state1" class="com.cg.spring.DI_demo.bean.State">
+		<property name="stateName" value="Karnataka" />
+		<property name="cities">
+			<!-- <set> -->
+			<list>
+				<value>Bangalore</value>
+				<value>Mysore</value>
+				<value>Davangere</value>
+				<value>Chikkaballapur</value>
+				<value>Belagavi</value>
+				<value>Mangalore</value>
+			<!-- </set> -->
+			</list>
+		</property>
+	</bean>
+	
+	<bean id="state2" class="com.cg.spring.DI_demo.bean.State2">
+		<property name="stateName" value="Karnataka" />
+		<property name="cities">
+			<map>
+				<entry key= "BGR"   value="Bangalore"/>
+				<entry key= "MYS"   value="Mysore"/>
+				<entry key= "DVG"   value="Davangere"/>
+				<entry key= "CBpur" value="Chikkaballapur"/>
+				<entry key= "BGI"   value="Belagavi"/>
+				<entry key= "MG"    value="Mangalore"/>
+			</map>
+		</property>
+	</bean>
+	
+
+</beans>

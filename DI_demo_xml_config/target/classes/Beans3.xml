@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans-4.0.xsd">
+	
+	<bean id="add1" class="com.cg.spring.DI_demo.bean.Address">
+		<property name="hno" value="7-8-9" />
+		<property name="street" value="Doddaballapur" />
+		<property name="city" value="Bangalore" />
+		<property name="state" value="Karnataka" />
+	</bean>
+	
+	<bean id="per1" class ="com.cg.spring.DI_demo.bean.Person">
+	<property name="ssn" value="999"/>
+	<property name="name" value="Jerry"/>
+	<constructor-arg name="address" ref = "add1"/>
+	</bean>
+	
+	
+	<!--  <bean id="per1" class ="com.cg.spring.DI_demo.bean.Person">
+	<constructor-arg name="ssn" value="999"/>
+	<constructor-arg name="name" value="Jerry"/>
+	<constructor-arg name="address" ref = "add1"/>
+	</bean>-->
+	
+	</beans>
